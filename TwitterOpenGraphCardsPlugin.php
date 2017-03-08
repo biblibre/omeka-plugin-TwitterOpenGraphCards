@@ -3,7 +3,7 @@
 define('TWITTER_CARDS_PLUGIN_DIR', dirname(__FILE__));
 define('TWITTER_CARDS_SITE_HANDLE_OPTION', 'twittercards_site_handle');
 
-class TwitterCardsPlugin extends Omeka_Plugin_AbstractPlugin
+class TwitterOpenGraphCardsPlugin extends Omeka_Plugin_AbstractPlugin
 {
   protected $_hooks =array(
     'uninstall',
