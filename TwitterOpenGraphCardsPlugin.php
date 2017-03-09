@@ -89,13 +89,13 @@ class TwitterOpenGraphCardsPlugin extends Omeka_Plugin_AbstractPlugin
 
     if (strlen($title) > 0 && strlen($description) > 0){
       //twitter
-      echo '<meta property="twitter:card" content="summary" />';
-      echo '<meta property="twitter:site" content="'.get_option(TWITTER_CARDS_SITE_HANDLE_OPTION).'" />';
-      echo '<meta property="twitter:title" content="'.strip_tags(html_entity_decode($title)).'" />';
-      echo '<meta property="twitter:description" content="'.strip_tags(html_entity_decode($description)).'" />';
+      echo '<meta property="twitter:card" content="summary" />'."\n";
+      echo '<meta property="twitter:site" content="'.get_option(TWITTER_CARDS_SITE_HANDLE_OPTION).'" />'."\n";
+      echo '<meta property="twitter:title" content="'.strip_tags(html_entity_decode($title)).'" />'."\n";
+      echo '<meta property="twitter:description" content="'.strip_tags(html_entity_decode($description)).'" />'."\n";
 
       if (strlen($image_url) > 0){
-        echo '<meta property="twitter:image:src" content="'.$image_url.'" />';
+        echo '<meta property="twitter:image:src" content="'.$image_url.'" />'."\n";
       }
       
       //opengraph
