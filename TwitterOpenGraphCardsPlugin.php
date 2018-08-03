@@ -32,7 +32,7 @@ class TwitterOpenGraphCardsPlugin extends Omeka_Plugin_AbstractPlugin
 
       $file = $exhibit->getFile();
       if($file){
-        $image_url = file_display_url($file, 'thumbnail');
+        $image_url = file_display_url($file, 'square_thumbnail');
       }
     }
     catch (Omeka_View_Exception $ove){
@@ -47,7 +47,7 @@ class TwitterOpenGraphCardsPlugin extends Omeka_Plugin_AbstractPlugin
       if (strlen($title) > 0 && strlen($description) > 0){
         foreach (loop('files', $item->Files) as $file){
           if($file->hasThumbnail()){
-            $image_url = file_display_url($file, 'thumbnail');
+            $image_url = file_display_url($file, 'square_thumbnail');
             break;
           }
         }
@@ -65,7 +65,7 @@ class TwitterOpenGraphCardsPlugin extends Omeka_Plugin_AbstractPlugin
 
       $file = $collection->getFile();
       if($file){
-        $image_url = file_display_url($file, 'thumbnail');
+        $image_url = file_display_url($file, 'square_thumbnail');
       }
     }
     catch (Omeka_View_Exception $ove){
@@ -80,7 +80,7 @@ class TwitterOpenGraphCardsPlugin extends Omeka_Plugin_AbstractPlugin
       if (isset($items[0])){
         foreach (loop('files', $items[0]->Files) as $file){
           if($file->hasThumbnail()){
-            $image_url = file_display_url($file, 'thumbnail');
+            $image_url = file_display_url($file, 'square_thumbnail');
             break;
           }
         }      
